@@ -11,6 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20150514193755) do
+
+  create_table "product_attributes", force: true do |t|
+    t.integer  "product_id"
+    t.string   "key"
+    t.float    "value"
+    t.string   "desc"
+    t.string   "permalink"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "product_attributes", ["product_id"], name: "index_product_attributes_on_product_id"
+
+  create_table "products", force: true do |t|
+    t.string   "name"
+    t.decimal  "price"
+    t.integer  "stock"
+    t.string   "permalink"
+    t.text     "description"
+    t.string   "company"
+    t.string   "brand"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

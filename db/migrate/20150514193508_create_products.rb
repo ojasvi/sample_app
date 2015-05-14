@@ -2,8 +2,10 @@ class CreateProducts < ActiveRecord::Migration
   def change
     create_table :products do |t|
       t.string :name
+      t.decimal :price
       t.integer :stock
-      t.float :price
+      t.string :permalink
+      t.text :description
       t.string :company
       t.string :brand
 

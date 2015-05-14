@@ -4,8 +4,10 @@
   <thead>
     <tr>
       <th>Name</th>
-      <th>Stock</th>
       <th>Price</th>
+      <th>Stock</th>
+      <th>Permalink</th>
+      <th>Description</th>
       <th>Company</th>
       <th>Brand</th>
       <th colspan="3"></th>
@@ -16,8 +18,10 @@
     <% @products.each do |product| %>
       <tr>
         <td><%= product.name %></td>
-        <td><%= product.stock %></td>
         <td><%= product.price %></td>
+        <td><%= product.stock %></td>
+        <td><%= product.permalink %></td>
+        <td><%= product.description %></td>
         <td><%= product.company %></td>
         <td><%= product.brand %></td>
         <td><%= link_to 'Show', product %></td>

@@ -2,14 +2,18 @@
 
 one:
   name: MyString
+  price: 9.99
   stock: 1
-  price: 1.5
+  permalink: MyString
+  description: MyText
   company: MyString
   brand: MyString
 
 two:
   name: MyString
+  price: 9.99
   stock: 1
-  price: 1.5
+  permalink: MyString
+  description: MyText
   company: MyString
   brand: MyString
