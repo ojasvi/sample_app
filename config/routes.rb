@@ -1,6 +1,4 @@
 Rails.application.routes.draw do
-  resources :product_categories
-
   resources :products
 
   # The priority is based upon order of creation: first created -> highest priority.

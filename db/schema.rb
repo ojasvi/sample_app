@@ -11,23 +11,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150510180052) do
-
-  create_table "product_categories", force: true do |t|
-    t.string   "name"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "products", force: true do |t|
-    t.string   "name"
-    t.float    "price"
-    t.integer  "stock"
-    t.string   "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "product_category_id"
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end

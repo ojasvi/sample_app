@@ -2,12 +2,14 @@
 
 one:
   name: MyString
-  price: 1.5
   stock: 1
-  description: MyString
+  price: 1.5
+  company: MyString
+  brand: MyString
 
 two:
   name: MyString
-  price: 1.5
   stock: 1
-  description: MyString
+  price: 1.5
+  company: MyString
+  brand: MyString
