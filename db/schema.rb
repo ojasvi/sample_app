@@ -11,19 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150514193755) do
-
-  create_table "product_attributes", force: true do |t|
-    t.integer  "product_id"
-    t.string   "key"
-    t.float    "value"
-    t.string   "desc"
-    t.string   "permalink"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "product_attributes", ["product_id"], name: "index_product_attributes_on_product_id"
+ActiveRecord::Schema.define(version: 20150518192935) do
 
   create_table "products", force: true do |t|
     t.string   "name"
@@ -33,6 +21,23 @@ ActiveRecord::Schema.define(version: 20150514193755) do
     t.text     "description"
     t.string   "company"
     t.string   "brand"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products_specs", id: false, force: true do |t|
+    t.integer "product_id"
+    t.integer "spec_id"
+  end
+
+  add_index "products_specs", ["product_id"], name: "index_products_specs_on_product_id"
+  add_index "products_specs", ["spec_id"], name: "index_products_specs_on_spec_id"
+
+  create_table "specs", force: true do |t|
+    t.string   "key"
+    t.string   "value"
+    t.float    "value_f"
+    t.string   "permalink"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
